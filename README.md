@@ -3,6 +3,8 @@
 A small yet mighty brute-force KNN service, tested up to 1M vectors.
 Good enough for prototypes and experimentation.
 
+Just supply your vectors in a JSONL file, and this service will make them queryable under cosine distance.
+
 ## Usage
 
 Run the server:
@@ -48,5 +50,5 @@ Responds with:
 
 ## Quirks
 
-This project only supports cosine similarity and dense vectors. Due to the minimal nature of this project, it is quite fast.
+This project only supports cosine distance and dense vectors. Due to the minimal nature of this project, it is quite fast.
 The core logic is basically a single Matrix-vector product in numpy. Performance is surprisingly competetive.
