@@ -40,6 +40,11 @@ def load_vectors(path: str, normalize: bool) -> tuple[List[str], np.ndarray]:
     return ids, matrix
 
 
+@app.get("/health")
+def health() -> dict:
+    return {"status": "ok"}
+
+
 @app.post("/neighbors")
 def neighbors(
     body: EmbeddingRequest, k: int = Query(default=10, ge=1)
