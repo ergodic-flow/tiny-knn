@@ -46,3 +46,7 @@ Responds with:
 ]
 ```
 
+## Quirks
+
+This project only supports cosine similarity and dense vectors. Due to the minimal nature of this project, it is quite fast.
+The core logic is basically a single Matrix-vector product in numpy. Performance is surprisingly competetive.
