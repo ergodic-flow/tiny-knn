@@ -53,7 +53,6 @@ def neighbors(
     Compute K nearest neighbors to the given query vector.
     L2-normalizes vector on request.
     """
-    assert M is not None, "index not loaded"
     q = np.asarray(body.v, dtype=np.float32)
     q /= max(np.linalg.norm(q), 1e-10)
     sims = M @ q
